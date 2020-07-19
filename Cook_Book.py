@@ -18,6 +18,7 @@ with open('Book.txt', encoding='utf-8') as f:
 pprint.pprint(cook_book)
 print()
 print(cook_book)
+print()
 
 def get_shop_list_by_dishes(dishes, person_count):
     shop_list_by_dishes_dict = {}
