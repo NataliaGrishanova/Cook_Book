@@ -1,3 +1,5 @@
+import pprint
+
 with open('Book.txt', encoding='utf-8') as f:
     cook_book = {}
     while True:
@@ -13,7 +15,7 @@ with open('Book.txt', encoding='utf-8') as f:
                 ingredients_list.append({'ingredient_name': ingredient[0], 'quantity': ingredient[1], 'measure': ingredient[2]})
         f.readline()
         cook_book.update({menu: ingredients_list})
-print(cook_book)
+pprint.pprint(cook_book)
 print()
 
 def get_shop_list_by_dishes(dishes, person_count):
@@ -22,7 +24,7 @@ def get_shop_list_by_dishes(dishes, person_count):
     for dish in dishes:
         for element in cook_book[dish]:
             shop_list_by_dishes_dict[element['ingredient_name']] = {'quantity': int(element['quantity']) * person_count, 'measure': element['measure']}
-    print(shop_list_by_dishes_dict)
+    pprint.pprint(shop_list_by_dishes_dict)
 
 
 get_shop_list_by_dishes(['Запеченный картофель', 'Утка по-пекински'], 5)
