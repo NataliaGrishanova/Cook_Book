@@ -38,5 +38,4 @@ def get_shop_list_by_dishes(dishes, person_count):
     print()
     pprint.pprint(shop_list_by_dishes_dict)
 
-
 get_shop_list_by_dishes(['Омлет', 'Омлет'], 1)
